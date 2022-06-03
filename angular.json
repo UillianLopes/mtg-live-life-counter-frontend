@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "mtg-live-life-counter": "apps/mtg-live-life-counter",
+    "mtg-live-life-counter-e2e": "apps/mtg-live-life-counter-e2e"
+  }
+}

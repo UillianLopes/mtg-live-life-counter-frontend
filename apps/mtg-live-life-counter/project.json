@@ -1,0 +1,93 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/mtg-live-life-counter/src",
+  "prefix": "mtg-live-life-counter",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/mtg-live-life-counter",
+        "index": "apps/mtg-live-life-counter/src/index.html",
+        "main": "apps/mtg-live-life-counter/src/main.ts",
+        "polyfills": "apps/mtg-live-life-counter/src/polyfills.ts",
+        "tsConfig": "apps/mtg-live-life-counter/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/mtg-live-life-counter/src/favicon.ico",
+          "apps/mtg-live-life-counter/src/assets"
+        ],
+        "styles": ["apps/mtg-live-life-counter/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/mtg-live-life-counter/src/environments/environment.ts",
+              "with": "apps/mtg-live-life-counter/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "mtg-live-life-counter:build:production"
+        },
+        "development": {
+          "browserTarget": "mtg-live-life-counter:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "mtg-live-life-counter:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/mtg-live-life-counter/**/*.ts",
+          "apps/mtg-live-life-counter/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/mtg-live-life-counter"],
+      "options": {
+        "jestConfig": "apps/mtg-live-life-counter/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

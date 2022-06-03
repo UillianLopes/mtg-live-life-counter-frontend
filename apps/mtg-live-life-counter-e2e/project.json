@@ -1,0 +1,28 @@
+{
+  "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "apps/mtg-live-life-counter-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/mtg-live-life-counter-e2e/cypress.json",
+        "devServerTarget": "mtg-live-life-counter:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "mtg-live-life-counter:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mtg-live-life-counter-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["mtg-live-life-counter"]
+}
