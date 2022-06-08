@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/data-access/room/src",
+  "prefix": "mtg",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/data-access/room"],
+      "options": {
+        "jestConfig": "libs/data-access/room/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data-access/room/**/*.ts",
+          "libs/data-access/room/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

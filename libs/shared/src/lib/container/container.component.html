@@ -1,0 +1,17 @@
+<main class="mtg-container">
+  <div class="mtg-container__header">
+    <ng-content select="[mtgContainerHeader]"></ng-content>
+  </div>
+  <div class="mtg-container__body">
+    <div
+      [class.container]="notFluid$ | async"
+      [class.container-fluid]="fluid$ | async"
+    >
+      <ng-content select="[mtgContainerBody]"></ng-content>
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <div class="mtg-container__footer">
+    <ng-content select="[mtgContainerFooter]"></ng-content>
+  </div>
+</main>

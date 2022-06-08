@@ -2,7 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "core": "libs/core",
+    "data-access": "libs/data-access",
+    "data-access-room": "libs/data-access/room",
     "mtg-live-life-counter": "apps/mtg-live-life-counter",
-    "mtg-live-life-counter-e2e": "apps/mtg-live-life-counter-e2e"
+    "shared": "libs/shared"
   }
 }

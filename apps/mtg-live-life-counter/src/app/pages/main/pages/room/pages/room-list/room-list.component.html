@@ -1,0 +1,6 @@
+<mtg-container>
+  <mtg-room-item
+    *ngFor="let room of rooms$ | async"
+    [room]="room"
+  ></mtg-room-item>
+</mtg-container>

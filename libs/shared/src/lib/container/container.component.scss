@@ -1,0 +1,22 @@
+.mtg-container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+
+  grid-template-rows: auto minmax(0px, 1fr) auto;
+  grid-template-columns: minmax(0px, 1fr);
+
+  &__header {
+    grid-row: 1;
+  }
+
+  &__body {
+    grid-row: 2;
+  }
+
+  &__footer {
+    grid-row: 3;
+  }
+
+  background: var(--primary);
+}

@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mtg-live-life-counter/core": ["libs/core/src/index.ts"],
+      "@mtg-live-life-counter/data-access": ["libs/data-access/src/index.ts"],
+      "@mtg-live-life-counter/data-access/room": [
+        "libs/data-access/room/src/index.ts"
+      ],
+      "@mtg-live-life-counter/shared": ["libs/shared/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

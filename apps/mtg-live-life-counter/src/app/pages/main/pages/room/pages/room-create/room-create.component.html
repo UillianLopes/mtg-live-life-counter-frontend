@@ -1,0 +1,20 @@
+<mtg-container>
+  <form [formGroup]="form">
+    <div class="card">
+      <div class="card-body">
+        <mtg-form-field>
+          <label mtgLabel>Name</label>
+          <input mtgInput formControlName="name" placeholder="Type the name" />
+        </mtg-form-field>
+        <mtg-form-field>
+          <label mtgLabel>Password</label>
+          <input
+            mtgInput
+            formControlName="password"
+            placeholder="Type the password"
+          />
+        </mtg-form-field>
+      </div>
+    </div>
+  </form>
+</mtg-container>
