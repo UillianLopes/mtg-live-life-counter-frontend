@@ -5,10 +5,13 @@
     "core": "libs/core",
     "features-home": "libs/features/home",
     "features-main": "libs/features/main",
+    "features-room": "libs/features/room",
     "features-sign-in": "libs/features/sign-in",
     "features-sign-up": "libs/features/sign-up",
     "mtg-live-life-counter": "apps/mtg-live-life-counter",
     "shared": "libs/shared",
-    "stores-room": "libs/stores/room"
+    "stores-authentication": "libs/stores/authentication",
+    "stores-room": "libs/stores/room",
+    "testing": "libs/testing"
   }
 }

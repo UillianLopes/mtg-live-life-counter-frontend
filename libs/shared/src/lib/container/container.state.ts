@@ -1,9 +1,12 @@
+import { Injectable } from '@angular/core';
 import { ComponentStore } from '@ngrx/component-store';
 
 export interface ContainerState {
   isLoading: boolean;
   fluid: boolean;
 }
+
+@Injectable()
 export class ContainerStore extends ComponentStore<ContainerState> {
   public readonly isLoading$ = this.select(({ isLoading }) => isLoading);
   public readonly fluid$ = this.select(({ fluid }) => fluid);

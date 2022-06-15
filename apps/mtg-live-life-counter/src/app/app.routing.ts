@@ -5,15 +5,24 @@ const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
   {
     path: 'main',
-    loadChildren: () => import('./pages/main').then((m) => m.MainModule),
+    loadChildren: () =>
+      import('@mtg-live-life-counter/features/main').then(
+        (m) => m.MainFeatureModule
+      ),
   },
   {
     path: 'sign-in',
-    loadChildren: () => import('./pages/sign-in').then((m) => m.SignInModule),
+    loadChildren: () =>
+      import('@mtg-live-life-counter/features/sign-in').then(
+        (m) => m.SignInFeatureModule
+      ),
   },
   {
-    path: 'sign-in',
-    loadChildren: () => import('./pages/sign-up').then((m) => m.SignUpModule),
+    path: 'sign-up',
+    loadChildren: () =>
+      import('@mtg-live-life-counter/features/sign-up').then(
+        (m) => m.SignUpFeatureModule
+      ),
   },
 ];
 

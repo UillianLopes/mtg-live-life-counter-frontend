@@ -2,7 +2,7 @@
   "$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/features/sign-up/src",
-  "prefix": "mtg-live-life-counter",
+  "prefix": "mtg",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",

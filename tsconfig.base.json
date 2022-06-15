@@ -22,6 +22,9 @@
       "@mtg-live-life-counter/features/main": [
         "libs/features/main/src/index.ts"
       ],
+      "@mtg-live-life-counter/features/room": [
+        "libs/features/room/src/index.ts"
+      ],
       "@mtg-live-life-counter/features/sign-in": [
         "libs/features/sign-in/src/index.ts"
       ],
@@ -29,7 +32,11 @@
         "libs/features/sign-up/src/index.ts"
       ],
       "@mtg-live-life-counter/shared": ["libs/shared/src/index.ts"],
-      "@mtg-live-life-counter/stores/room": ["libs/stores/room/src/index.ts"]
+      "@mtg-live-life-counter/stores/authentication": [
+        "libs/stores/authentication/src/index.ts"
+      ],
+      "@mtg-live-life-counter/stores/room": ["libs/stores/room/src/index.ts"],
+      "@mtg-live-life-counter/testing": ["libs/testing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
