@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/features/main/src",
+  "prefix": "mtg-live-life-counter",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/features/main"],
+      "options": {
+        "jestConfig": "libs/features/main/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/features/main/**/*.ts",
+          "libs/features/main/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

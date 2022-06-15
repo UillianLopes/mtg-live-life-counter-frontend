@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/stores/room/src",
+  "prefix": "mtg",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/stores/room"],
+      "options": {
+        "jestConfig": "libs/stores/room/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/stores/room/**/*.ts",
+          "libs/stores/room/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

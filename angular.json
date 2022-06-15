@@ -3,9 +3,12 @@
   "version": 2,
   "projects": {
     "core": "libs/core",
-    "data-access": "libs/data-access",
-    "data-access-room": "libs/data-access/room",
+    "features-home": "libs/features/home",
+    "features-main": "libs/features/main",
+    "features-sign-in": "libs/features/sign-in",
+    "features-sign-up": "libs/features/sign-up",
     "mtg-live-life-counter": "apps/mtg-live-life-counter",
-    "shared": "libs/shared"
+    "shared": "libs/shared",
+    "stores-room": "libs/stores/room"
   }
 }

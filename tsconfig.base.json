@@ -16,11 +16,20 @@
     "baseUrl": ".",
     "paths": {
       "@mtg-live-life-counter/core": ["libs/core/src/index.ts"],
-      "@mtg-live-life-counter/data-access": ["libs/data-access/src/index.ts"],
-      "@mtg-live-life-counter/data-access/room": [
-        "libs/data-access/room/src/index.ts"
+      "@mtg-live-life-counter/features/home": [
+        "libs/features/home/src/index.ts"
       ],
-      "@mtg-live-life-counter/shared": ["libs/shared/src/index.ts"]
+      "@mtg-live-life-counter/features/main": [
+        "libs/features/main/src/index.ts"
+      ],
+      "@mtg-live-life-counter/features/sign-in": [
+        "libs/features/sign-in/src/index.ts"
+      ],
+      "@mtg-live-life-counter/features/sign-up": [
+        "libs/features/sign-up/src/index.ts"
+      ],
+      "@mtg-live-life-counter/shared": ["libs/shared/src/index.ts"],
+      "@mtg-live-life-counter/stores/room": ["libs/stores/room/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -8,7 +8,7 @@ import { RoomItemStore } from './room-item.state';
   styleUrls: ['./room-item.component.scss'],
   providers: [RoomItemStore],
 })
-export class RoomItemComponent implements OnInit {
+export class RoomItemComponent {
   @Input()
   set room(room: RoomModel) {
     this._store.setRoom(room);
@@ -17,6 +17,4 @@ export class RoomItemComponent implements OnInit {
   public readonly room$ = this._store.room$;
 
   constructor(private readonly _store: RoomItemStore) {}
-
-  public ngOnInit(): void {}
 }

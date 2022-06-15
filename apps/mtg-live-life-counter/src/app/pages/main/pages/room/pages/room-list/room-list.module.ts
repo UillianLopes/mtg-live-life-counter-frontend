@@ -5,7 +5,7 @@ import { RoomListComponent } from './room-list.component';
 
 import { RoomListRoutingModule } from './room-list.routing';
 import { RoomItemComponent } from './components/room-item/room-item.component';
-import { RoomStoreModule } from '../../../../../../stores/room';
+import { RoomStoreModule } from '@mtg-live-life-counter/stores/room';
 
 @NgModule({
   declarations: [RoomListComponent, RoomItemComponent],

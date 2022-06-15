@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { RoomFacade } from '@mtg-live-life-counter/data-access/room';
+import { RoomFacade } from '@mtg-live-life-counter/stores/room';
 
 @Component({
   selector: 'mtg-room-list',
