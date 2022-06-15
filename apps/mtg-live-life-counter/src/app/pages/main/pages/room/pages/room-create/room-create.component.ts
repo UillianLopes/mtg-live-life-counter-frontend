@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'mtg-room-create',
@@ -13,7 +13,7 @@ export class RoomCreateComponent implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(private readonly _formBuilder: FormBuilder) {}
+  constructor(private readonly _formBuilder: UntypedFormBuilder) {}
 
   public ngOnInit(): void {}
 }
