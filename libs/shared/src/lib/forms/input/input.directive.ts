@@ -19,7 +19,6 @@ import { Subject, takeUntil } from 'rxjs';
   host: {
     class: 'form-control',
   },
-
 })
 export class InputDirective implements OnInit, OnDestroy {
   private readonly _destroyed$ = new Subject<void>();

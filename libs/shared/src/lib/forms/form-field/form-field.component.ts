@@ -4,9 +4,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'mtg-form-field',
   templateUrl: './form-field.component.html',
   styleUrls: ['./form-field.component.scss'],
-  host: {
-    class: 'mb-3',
-  },
   encapsulation: ViewEncapsulation.None,
+  host: {
+    class: 'mtg-form-field mb-3',
+  },
 })
 export class FormFieldComponent {}

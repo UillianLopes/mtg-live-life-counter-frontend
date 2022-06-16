@@ -1,0 +1,11 @@
+.mtg-button {
+  position: relative;
+
+  &--loading {
+    pointer-events: none;
+  }
+}
+
+:host {
+  pointer-events: none;
+}

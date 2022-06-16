@@ -21,8 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "mtg",
-            "style": "kebab-case"
+            "prefix": "mtg"
           }
         ],
         "@angular-eslint/no-host-metadata-property": ["off"]

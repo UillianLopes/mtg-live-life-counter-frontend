@@ -1,1 +1,10 @@
-<p>sign-in works!</p>
+<form [formGroup]="form">
+  <mtg-form-field>
+    <label mtgLabel>Username</label>
+    <input mtgInput formControlName="username" />
+  </mtg-form-field>
+  <mtg-form-field>
+    <label mtgLabel>Password</label>
+    <input mtgInput formControlName="password" />
+  </mtg-form-field>
+</form>

@@ -21,8 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "mtg-live-life-counter",
-            "style": "kebab-case"
+            "prefix": "mtg"
           }
         ]
       }

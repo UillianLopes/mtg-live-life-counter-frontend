@@ -1,1 +1,20 @@
-<p>sign-up works!</p>
+<mtg-container>
+  <form [formGroup]="form">
+    <mtg-form-field>
+      <label mtgLabel>Username</label>
+      <input mtgInput formControlName="username" type="text" />
+    </mtg-form-field>
+    <mtg-form-field>
+      <label mtgLabel>E-mail</label>
+      <input mtgInput formControlName="email" type="email" />
+    </mtg-form-field>
+    <mtg-form-field>
+      <label mtgLabel>Password</label>
+      <input mtgInput formControlName="password" type="password" />
+    </mtg-form-field>
+    <button mtg-button [isLoading]="true"> Salvar </button>
+    <button mtg-outline-button>
+      Teste
+    </button>
+  </form>
+</mtg-container>

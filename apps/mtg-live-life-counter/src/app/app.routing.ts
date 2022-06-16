@@ -4,6 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
   {
+    path: 'home',
+    loadChildren: () =>
+      import('@mtg-live-life-counter/features/home').then(
+        (m) => m.HomeFeatureModule
+      ),
+  },
+  {
     path: 'main',
     loadChildren: () =>
       import('@mtg-live-life-counter/features/main').then(
