@@ -1,10 +1,13 @@
-<form [formGroup]="form">
-  <mtg-form-field>
-    <label mtgLabel>Username</label>
-    <input mtgInput formControlName="username" />
-  </mtg-form-field>
-  <mtg-form-field>
-    <label mtgLabel>Password</label>
-    <input mtgInput formControlName="password" />
-  </mtg-form-field>
-</form>
+<mtg-container>
+  <form [formGroup]="form">
+    <mtg-form-field>
+      <label mtgLabel>Username</label>
+      <input mtgInput formControlName="username" />
+    </mtg-form-field>
+    <mtg-form-field>
+      <label mtgLabel>Password</label>
+      <input mtgInput formControlName="password" />
+    </mtg-form-field>
+  </form>
+  <button mtg-button (click)="signIn()">Sign In</button>
+</mtg-container>

@@ -6,7 +6,9 @@ import {
   MtgContainerModule,
   MtgFormsModule,
   MtgButtonModule,
+  MtgHeaderModule,
 } from '@mtg-live-life-counter/shared';
+import { SignUpStoreModule } from '@mtg-live-life-counter/stores/sign-up';
 
 @NgModule({
   imports: [
@@ -14,7 +16,9 @@ import {
     SignUpFeatureRoutingModule,
     MtgFormsModule,
     MtgContainerModule,
-    MtgButtonModule
+    MtgButtonModule,
+    SignUpStoreModule,
+    MtgHeaderModule,
   ],
   declarations: [SignUpFeatureComponent],
 })

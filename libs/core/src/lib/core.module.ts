@@ -1,42 +1,39 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthenticationStoreModule } from './stores/authentication';
-import { API_URL } from './tokens';
-import { AuthInterceptor } from './interceptors';
-import { MustBeAuthenticatedGuard } from './guards';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { API_ENDPOINT, SIGNAL_R_ENDPOINT } from './tokens';
+
 import { RoomService, UserService } from './services';
+import { UrlInterceptor } from './interceptors';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, AuthenticationStoreModule],
+  imports: [CommonModule],
   providers: [],
 })
 export class CoreModule {
   static forRoot({
-    apiUrl,
+    apiEndpoint,
+    signalREndpoint,
   }: {
-    apiUrl: string;
+    signalREndpoint: string;
+    apiEndpoint: string;
   }): ModuleWithProviders<CoreModule> {
     return {
       ngModule: CoreModule,
       providers: [
         {
-          provide: API_URL,
-          useValue: apiUrl,
+          provide: API_ENDPOINT,
+          useValue: apiEndpoint,
+        },
+        {
+          provide: SIGNAL_R_ENDPOINT,
+          useValue: signalREndpoint,
         },
         {
           provide: HTTP_INTERCEPTORS,
-          useClass: AuthInterceptor,
+          useClass: UrlInterceptor,
           multi: true,
         },
-        {
-          provide: HTTP_INTERCEPTORS,
-          useClass: AuthInterceptor,
-          multi: true,
-        },
-
-        MustBeAuthenticatedGuard,
-
         UserService,
         RoomService,
       ],

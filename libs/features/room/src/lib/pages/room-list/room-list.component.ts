@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastService } from '@mtg-live-life-counter/shared';
 
-import { RoomFacade } from '@mtg-live-life-counter/stores/room';
+import { RoomStoreFacade } from '@mtg-live-life-counter/stores/room';
 
 @Component({
   selector: 'mtg-room-list',
@@ -11,7 +12,14 @@ export class RoomListComponent implements OnInit {
   public readonly rooms$ = this._facade.rooms$;
   public readonly isRoomsLoading$ = this._facade.isRoomsLoading$;
 
-  constructor(private readonly _facade: RoomFacade) {}
+  constructor(
+    private readonly _facade: RoomStoreFacade,
+    private readonly _toastService: ToastService
+  ) {}
+
+  open() {
+    this._toastService.open('TESTE ', 'This is a toast test', 'primary');
+  }
 
   public ngOnInit(): void {
     this._facade.loadRooms();

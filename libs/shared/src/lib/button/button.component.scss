@@ -1,11 +1,32 @@
 .mtg-button {
   position: relative;
+  $self: &;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  &__loading-icon {
+    animation: iconAnimation 0.5s linear infinite;
+    display: none;
+  }
 
   &--loading {
     pointer-events: none;
+    #{$self}__loading-icon {
+      display: block;
+    }
   }
 }
 
-:host {
-  pointer-events: none;
+@keyframes iconAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

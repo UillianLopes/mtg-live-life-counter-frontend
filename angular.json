@@ -12,6 +12,7 @@
     "shared": "libs/shared",
     "stores-authentication": "libs/stores/authentication",
     "stores-room": "libs/stores/room",
+    "stores-sign-up": "libs/stores/sign-up",
     "testing": "libs/testing"
   }
 }

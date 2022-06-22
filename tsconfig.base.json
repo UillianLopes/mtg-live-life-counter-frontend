@@ -36,6 +36,9 @@
         "libs/stores/authentication/src/index.ts"
       ],
       "@mtg-live-life-counter/stores/room": ["libs/stores/room/src/index.ts"],
+      "@mtg-live-life-counter/stores/sign-up": [
+        "libs/stores/sign-up/src/index.ts"
+      ],
       "@mtg-live-life-counter/testing": ["libs/testing/src/index.ts"]
     }
   },

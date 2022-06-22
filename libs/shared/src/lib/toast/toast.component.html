@@ -1,0 +1,9 @@
+<div class="card" [ngClass]="(class$ | async)!" style="max-width: 18rem">
+  <div class="card-header" *ngIf="title$ | async as title">{{ title }}</div>
+  <div class="card-body">
+    <!-- <h5 class="card-title">Primary card title</h5> -->
+    <p class="card-text" *ngIf="message$ | async as message">
+      {{ message }}
+    </p>
+  </div>
+</div>

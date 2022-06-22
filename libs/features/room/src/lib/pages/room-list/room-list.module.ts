@@ -1,6 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MtgContainerModule } from '@mtg-live-life-counter/shared';
+import {
+  MtgButtonModule,
+  MtgContainerModule,
+  MtgHeaderModule
+} from '@mtg-live-life-counter/shared';
 import { RoomListComponent } from './room-list.component';
 
 import { RoomListRoutingModule } from './room-list.routing';
@@ -14,6 +18,8 @@ import { RoomStoreModule } from '@mtg-live-life-counter/stores/room';
     RoomListRoutingModule,
     RoomStoreModule,
     MtgContainerModule,
+    MtgButtonModule,
+    MtgHeaderModule
   ],
 })
 export class RoomListModule {}

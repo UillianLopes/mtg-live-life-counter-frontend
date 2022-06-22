@@ -8,20 +8,8 @@ export interface ButtonState {
   isLoading: boolean;
   color: Color;
   appearance: ButtonAppearance;
+  disabled: boolean;
   size?: Size;
-}
-
-function obtainButtonClass(
-  color: Color,
-  appearance: ButtonAppearance,
-  size?: Size
-): string[] {
-  const selector = appearance == 'outline' ? `btn-outline` : `btn`;
-  const colors = [`btn`, `mtg-button`, `${selector}-${color}`];
-
-  if (size) colors.push(`btn-${size}`);
-
-  return colors;
 }
 
 @Injectable()
@@ -30,21 +18,16 @@ export class ButtonStore extends ComponentStore<ButtonState> {
   public readonly color$ = this.select(({ color }) => color);
   public readonly size$ = this.select(({ size }) => size);
   public readonly appearance$ = this.select(({ appearance }) => appearance);
-  public readonly class$ = this.select(
-    this.color$,
-    this.appearance$,
-    this.size$,
-    obtainButtonClass
-  );
+  public readonly disabled$ = this.select(({ disabled }) => disabled);
 
   constructor(elementRef: ElementRef<HTMLElement>) {
     super({
       isLoading: false,
+      disabled: false,
       color: 'primary',
-      appearance:
-        elementRef.nativeElement.tagName === 'MTG-OUTLINE-BUTTON'
-          ? 'outline'
-          : 'solid',
+      appearance: elementRef.nativeElement.hasAttribute('mtg-outline-button')
+        ? 'outline'
+        : 'solid',
     });
   }
 
@@ -69,4 +52,9 @@ export class ButtonStore extends ComponentStore<ButtonState> {
       appearance,
     })
   );
+
+  public readonly setDisabled = this.updater((state, disabled: boolean) => ({
+    ...state,
+    disabled,
+  }));
 }

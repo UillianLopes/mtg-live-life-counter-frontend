@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/stores/sign-up/src",
+  "prefix": "mtg-live-life-counter",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/stores/sign-up"],
+      "options": {
+        "jestConfig": "libs/stores/sign-up/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/stores/sign-up/**/*.ts",
+          "libs/stores/sign-up/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

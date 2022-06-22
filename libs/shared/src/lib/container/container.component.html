@@ -1,6 +1,6 @@
 <main class="mtg-container">
   <div class="mtg-container__header">
-    <ng-content select="[mtgContainerHeader]"></ng-content>
+    <ng-content select="mtg-header,[mtgContainerHeader]"></ng-content>
   </div>
   <div class="mtg-container__body">
     <div class="container" [class.container-fluid]="fluid$ | async">
@@ -11,4 +11,7 @@
   <div class="mtg-container__footer">
     <ng-content select="[mtgContainerFooter]"></ng-content>
   </div>
+  <mtg-loading [show]="(isLoading$ | async)!">
+    <ng-content select="[mtgLoadingContent]"></ng-content>
+  </mtg-loading>
 </main>

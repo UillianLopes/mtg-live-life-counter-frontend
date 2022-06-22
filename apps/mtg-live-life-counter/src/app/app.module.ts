@@ -7,16 +7,25 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { CoreModule } from '@mtg-live-life-counter/core';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastModule } from '@mtg-live-life-counter/shared';
+import { AuthenticationStoreModule } from '@mtg-live-life-counter/stores/authentication';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({}),
-    CoreModule.forRoot({ apiUrl: environment.apiUrl }),
+    CoreModule.forRoot({
+      apiEndpoint: environment.apiEndpoint,
+      signalREndpoint: environment.signalREndpoint,
+    }),
+    ToastModule.forRoot(),
+    AuthenticationStoreModule.forRoot(),
   ],
   bootstrap: [AppComponent],
 })

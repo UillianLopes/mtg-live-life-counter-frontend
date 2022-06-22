@@ -1,4 +1,5 @@
 <mtg-container>
+  <button mtg-button (click)="open()">Testar toast</button>
   <mtg-room-item
     *ngFor="let room of rooms$ | async"
     [room]="room"

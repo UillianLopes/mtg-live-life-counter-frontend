@@ -41,13 +41,11 @@ export class InputDirective implements OnInit, OnDestroy {
       this._formControlDirective.control.statusChanges
         .pipe(takeUntil(this._destroyed$))
         .subscribe((status) => this._applyStatusClass(status));
-
-    if (this._formControlName)
+    else if (this._formControlName)
       this._formControlName.control.statusChanges
         .pipe(takeUntil(this._destroyed$))
         .subscribe((status) => this._applyStatusClass(status));
-
-    if (this._ngControl && this._ngControl.control)
+    else if (this._ngControl && this._ngControl.control)
       this._ngControl.control.statusChanges
         .pipe(takeUntil(this._destroyed$))
         .subscribe((status) => this._applyStatusClass(status));
